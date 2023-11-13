@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario Com JS</title>
+    <!--receber o valor para colocar na variavel-->
+    <!--o VALUE pega o nome de dentro da caixa-->
+    <script>
+        function exibir(){
+            let nome = document.getElementById("nome").value; <!--pega o elemento pelo id-->
+            let sobrenome = document.getElementById("sobrenome").value;
+            let idade = document.getElementById("idade").value;
+        
+            let dadosParagrafo = "Cliente: "+nome+" "+sobrenome+"  "+idade+" anos";
+            document.getElementById("dados") .innerHTML = dadosParagrafo;
+        }
+    </script>
+</head>
+<body>
+    <h1>Formulario</h1>
+
+        <label>Nome</label>
+        <input type="text" id="nome" name="nome">
+        <label>Sobrenome</label>
+        <input type="text" id="sobrenome" name="sobrenome">
+        <label>Idade</label>
+        <input type="number" id="idade" name="idade">
+        <button onclick="exibir()">enviar</button>
+        <br>
+
+        <p id="dados"></p>
+</body>
+</html>
